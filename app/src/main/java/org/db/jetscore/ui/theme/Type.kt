@@ -1,10 +1,23 @@
 package org.db.jetscore.ui.theme
 
+import android.R.attr.font
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.googlefonts.GoogleFont
 import androidx.compose.ui.unit.sp
+import org.db.jetscore.R
+
+
+val provider = GoogleFont.Provider(
+  providerAuthority = "com.google.android.gms.fonts",
+  providerPackage = "com.google.android.gms",
+  certificates = R.array.com_google_android_gms_fonts_certs
+)
+
+
+
 
 // Set of Material typography styles to start with
 val Typography = Typography(
@@ -15,6 +28,7 @@ val Typography = Typography(
     lineHeight = 24.sp,
     letterSpacing = 0.5.sp
   )
+
   /* Other default text styles to override
     titleLarge = TextStyle(
         fontFamily = FontFamily.Default,

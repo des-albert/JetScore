@@ -7,16 +7,18 @@ import androidx.lifecycle.ViewModel
 data class Score(
     var name: String,
     var play: Int,
+    var prevPlay: Int,
     var out: Int,
+    var prevOut: Int,
     var total: Int
 )
 
 class MainViewModel : ViewModel() {
 
     val players: SnapshotStateList<Score> = mutableStateListOf(
-      Score("DB", 0, 0, 0),
-      Score("Bo", 0, 0, 0),
-      Score("Steve", 0, 0, 0)
+      Score("DB", 0, 0, 0, 0, 0),
+      Score("Bo", 0, 0, 0, 0, 0),
+      Score("Steve", 0, 0, 0, 0, 0)
     )
 
 }

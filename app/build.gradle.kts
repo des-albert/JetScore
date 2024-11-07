@@ -10,7 +10,7 @@ android {
 
   defaultConfig {
     applicationId = "org.db.jetscore"
-    minSdk = 35
+    minSdk = 34
     targetSdk = 35
     versionCode = 1
     versionName = "1.0"
@@ -55,9 +55,8 @@ dependencies {
   debugImplementation(libs.androidx.ui.tooling)
   debugImplementation(libs.androidx.ui.test.manifest)
   implementation(libs.androidx.lifecycle.viewmodel.ktx)
-  // ViewModel utilities for Compose
   implementation(libs.androidx.lifecycle.viewmodel.compose)
-  // LiveData
   implementation(libs.androidx.lifecycle.livedata.ktx)
+  implementation(libs.androidx.ui.text.google.fonts)
 
 }
