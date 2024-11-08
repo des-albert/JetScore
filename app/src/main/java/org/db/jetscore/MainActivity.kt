@@ -105,10 +105,10 @@ fun ScoreSummary(
       {
         for ((index, score) in players.withIndex()) {
           Column(
-            modifier = modifier.padding(24.dp),
+            modifier = modifier.padding(18.dp),
             horizontalAlignment = Alignment.CenterHorizontally
           ) {
-            Text(fontFamily = fontFamily, text = score.name, fontSize = 28.sp, color = Color.Cyan)
+            Text(fontFamily = fontFamily, text = score.name, fontSize = 24.sp, color = Color.Cyan)
             Spacer(modifier = Modifier.height(4.dp))
             Text(text = score.play.toString(), fontSize = 24.sp, color = Color.Yellow)
             Spacer(modifier = Modifier.height(2.dp))
@@ -125,7 +125,7 @@ fun ScoreSummary(
               onClick = {
                 players[index] = players[index].copy(
                   play = players[index].play + inc,
-                  prevPlay = players[index].play + inc,
+                  prevPlay = inc,
                   prevOut = 0,
                   total = players[index].total + inc
                 )
@@ -143,7 +143,7 @@ fun ScoreSummary(
                 players[index] = players[index].copy(
                   out = players[index].out + inc,
                   prevPlay = 0,
-                  prevOut = players[index].out + inc,
+                  prevOut = inc,
                   total = players[index].total + inc
                 )
                 inc = 0
@@ -212,7 +212,7 @@ fun ScoreSummary(
             ) {
               Text(
                 text = "The Winner is ${score.name}",
-                fontFamily = fontFamily, fontSize = 36.sp, color = Color.Cyan
+                fontFamily = fontFamily, fontSize = 32.sp, color = Color.Cyan
               )
             }
         }
